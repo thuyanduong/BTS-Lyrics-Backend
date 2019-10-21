@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
   def bts
-    render json: AlbumType.all, include: '**'
+    render json: AlbumTypeSerializer.new(AlbumType.all).to_complete_json
   end
 
   def search

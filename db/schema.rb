@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_01_211000) do
+ActiveRecord::Schema.define(version: 2019_10_11_001910) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,17 +35,20 @@ ActiveRecord::Schema.define(version: 2019_04_01_211000) do
   create_table "songs", force: :cascade do |t|
     t.string "title"
     t.string "slug"
-    t.integer "album_id"
-    t.integer "album_type_id"
-    t.integer "track_number"
     t.string "translator"
     t.string "translator_url"
     t.string "music_url"
     t.string "youtube_url"
     t.string "lyrics"
     t.string "translation"
-    t.boolean "is_duplicate"
-    t.integer "duplicate_song_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tracks", force: :cascade do |t|
+    t.integer "album_id"
+    t.integer "song_id"
+    t.integer "track_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
