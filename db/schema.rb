@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_11_001910) do
+ActiveRecord::Schema.define(version: 2020_01_15_144809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,29 @@ ActiveRecord::Schema.define(version: 2019_10_11_001910) do
     t.date "release_date"
     t.string "image_url"
     t.string "music_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cards", force: :cascade do |t|
+    t.string "korean"
+    t.string "english"
+    t.string "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.string "color"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "flash_cards", force: :cascade do |t|
+    t.integer "category_id"
+    t.integer "card_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -51,6 +74,14 @@ ActiveRecord::Schema.define(version: 2019_10_11_001910) do
     t.integer "track_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
   end
 
 end

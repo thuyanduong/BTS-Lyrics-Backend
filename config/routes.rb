@@ -19,4 +19,20 @@ Rails.application.routes.draw do
   get '/album-types', to: 'album_types#index'
 
   put '/tracks', to: 'tracks#update'
+
+  post '/login', to: 'auth#create'
+  get '/user', to: 'users#profile'
+
+  get '/categories/:id', to: 'categories#show'
+  patch '/categories/:id', to: 'categories#update'
+  post '/categories', to: 'categories#create'
+  delete '/categories/:id', to: 'categories#destroy'
+
+  get '/cards/:id', to: 'cards#show'
+  post '/cards', to: 'cards#create'
+  delete '/cards/:id', to: 'cards#destroy'
+  patch '/cards/:id', to: 'cards#update'
+
+  get '/flash-cards', to: 'cards#index'
+
 end
