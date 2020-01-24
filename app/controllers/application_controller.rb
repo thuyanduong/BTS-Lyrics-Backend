@@ -20,7 +20,7 @@ class ApplicationController < ActionController::API
   end
 
   def secret_key
-    'h3llo'
+    Rails.application.secrets.secret_key_base
   end
 
   def encode(payload)
