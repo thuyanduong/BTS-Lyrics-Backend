@@ -13,25 +13,4 @@ class CategorySerializer
     }
     @data.to_json(options)
   end
-
-  # def to_complete_json
-  #   options = {
-  #     include: {
-  #       flash_cards: {
-  #         only: [
-  #           :id,
-  #           :front,
-  #           :back,
-  #           :notes
-  #         ]
-  #       }
-  #     },
-  #     only: [
-  #       :id,
-  #       :name,
-  #       :color
-  #     ]
-  #   }
-  #   @data.to_json(options)
-  # end
 end
