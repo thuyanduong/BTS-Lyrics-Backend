@@ -2,7 +2,7 @@ class AuthController < ApplicationController
   def create
     user = User.find_by(username: params[:username])
     if (user && user.authenticate(params[:password]) )
-    #   token = encode({user_id: user.id})
+      token = encode({user_id: user.id})
     #   data = user.user_data
     #   data[:success] = true
     #   data[:message] = "Successfully logged in",
