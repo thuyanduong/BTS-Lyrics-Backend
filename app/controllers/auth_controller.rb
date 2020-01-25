@@ -3,12 +3,11 @@ class AuthController < ApplicationController
     user = User.find_by(username: params[:username])
     if (user && user.authenticate(params[:password]) )
       token = encode({user_id: user.id})
-    #   data = user.user_data
-    #   data[:success] = true
-    #   data[:message] = "Successfully logged in",
-    #   data[:token] = token
-    #   render json: data, status: :accepted
-      render json: "correct username and password"
+      data = user.user_data
+      data[:success] = true
+      data[:message] = "Successfully logged in",
+      data[:token] = token
+      render json: data, status: :accepted
     else
       render json: {
         success: false,
