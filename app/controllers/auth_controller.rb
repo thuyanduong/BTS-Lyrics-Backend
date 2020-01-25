@@ -1,6 +1,6 @@
 class AuthController < ApplicationController
   def create
-    user = User.find_by(username: params["username"])
+    user = User.find_by(username: params[:username])
     if true #(user && user.authenticate(params["password"]) )
       token = encode({user_id: user.id})
       data = user.user_data
