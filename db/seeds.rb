@@ -1,3 +1,7 @@
+User.create!([
+  {username: "test", password_digest: "$2a$10$XnF.VA3QufBYir4AMVjJH.dN2a2W8yGRynUK7Plwk2e8NHmdn2U4u", admin: false},
+  {username: "annduong", password_digest: "$2a$10$7aOgP.7Vi.ZSxC10a5qu5eqsNPeAzORbgjiDOdJUb9uEcVFU0gJri", admin: true}
+])
 AlbumType.create!([
   {category: "Studio Albums"},
   {category: "Mixed Tapes"},
@@ -19,7 +23,7 @@ Album.create!([
   {album_type_id: 1, title: "Love Yourself 承 'Her'", slug: "love-yourself-her", release_date: "2017-09-18", image_url: "https://upload.wikimedia.org/wikipedia/en/6/62/Ly-her.jpg", music_url: "https://open.spotify.com/album/2FTS6a6DLXMNp8flyA0HGO"},
   {album_type_id: 1, title: "Love Yourself 轉 'Tear'", slug: "love-yourelf-tear", release_date: "2018-05-18", image_url: "https://upload.wikimedia.org/wikipedia/en/8/88/Love_Yourself_Tear_Cover.jpeg", music_url: "https://open.spotify.com/album/2jJfnAZE6IG3oYnUv2eCj4"},
   {album_type_id: 1, title: "Love Yourself 結 'Answer'", slug: "love-yourself-answer", release_date: "2018-08-24", image_url: "https://upload.wikimedia.org/wikipedia/en/e/e2/BTS%2C_Love_Yourself_Answer%2C_album_cover.jpg", music_url: "https://open.spotify.com/album/2lATw9ZAVp7ILQcOKPCPqp"},
-  {album_type_id: 1, title: "Map of the Soul:", slug: "map-of-the-soul", release_date: "2019-04-12", image_url: "https://upload.wikimedia.org/wikipedia/en/5/5c/BTS_-_Map_of_the_Soul_Persona.png", music_url: "https://open.spotify.com/album/1AvXa8xFEXtR3hb4bgihIK"}
+  {album_type_id: 1, title: "Map of the Soul: Persona", slug: "map-of-the-soul-persona", release_date: "2019-04-12", image_url: "https://upload.wikimedia.org/wikipedia/en/5/5c/BTS_-_Map_of_the_Soul_Persona.png", music_url: "https://open.spotify.com/album/1AvXa8xFEXtR3hb4bgihIK"}
 ])
 Card.create!([
   {korean: "delete me", english: "delete me", notes: "meh"},
@@ -383,8 +387,4 @@ Track.create!([
   {album_id: 8, song_id: 106, track_number: 22},
   {album_id: 12, song_id: 180, track_number: 22},
   {album_id: 8, song_id: 107, track_number: 23}
-])
-User.create!([
-  {username: "test", password_digest: "$2a$10$XnF.VA3QufBYir4AMVjJH.dN2a2W8yGRynUK7Plwk2e8NHmdn2U4u", admin: false},
-  {username: "annduong", password_digest: "$2a$10$7aOgP.7Vi.ZSxC10a5qu5eqsNPeAzORbgjiDOdJUb9uEcVFU0gJri", admin: true}
 ])
