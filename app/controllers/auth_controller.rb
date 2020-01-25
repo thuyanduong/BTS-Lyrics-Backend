@@ -10,11 +10,10 @@ class AuthController < ApplicationController
     #   render json: data, status: :accepted
       render json: "correct username and password"
     else
-    #   render json: {
-    #     success: false,
-    #     message: "Invalid username or password"
-    #   }, status: :unauthorized
-      render json: "inncorrect username or password"
+      render json: {
+        success: false,
+        message: "Invalid username or password"
+      }, status: :unauthorized
     end
   end
 end
