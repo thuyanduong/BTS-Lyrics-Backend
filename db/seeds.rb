@@ -1,3 +1,14 @@
+User.create!([
+  {id: 2, username: "test", password_digest: "$2a$10$XnF.VA3QufBYir4AMVjJH.dN2a2W8yGRynUK7Plwk2e8NHmdn2U4u", created_at: "2019-10-21 21:29:32", updated_at: "2019-10-21 21:29:32", admin: false},
+  {id: 1, username: "annduong", password_digest: "$2a$10$7aOgP.7Vi.ZSxC10a5qu5eqsNPeAzORbgjiDOdJUb9uEcVFU0gJri", created_at: "2019-10-21 14:58:10", updated_at: "2020-01-13 21:46:49", admin: true}
+])
+AlbumType.create!([
+  {id: 1, category: "Studio Albums", created_at: "2019-04-07 00:35:48", updated_at: "2019-04-07 00:35:48"},
+  {id: 2, category: "Mixed Tapes", created_at: "2019-04-07 00:35:48", updated_at: "2019-04-07 00:35:48"},
+  {id: 3, category: "Sound Cloud", created_at: "2019-04-07 00:35:48", updated_at: "2019-04-07 00:35:48"},
+  {id: 4, category: "Collaborations", created_at: "2019-04-07 00:35:48", updated_at: "2019-04-07 00:35:48"},
+  {id: 5, category: "Original Sound Tracks", created_at: "2019-04-07 00:35:48", updated_at: "2019-10-13 06:08:38"}
+])
 Album.create!([
   {id: 1, album_type_id: 1, title: "2 Cool 4 Skool", slug: "2-cool-4-skool", release_date: "2013-06-13", image_url: "https://upload.wikimedia.org/wikipedia/en/7/78/2cool4skoolalbumcover.jpg", music_url: "https://open.spotify.com/album/3L4l2jfFtydU9Mo9vjnxgN", created_at: "2019-04-07 00:35:48", updated_at: "2019-10-15 17:18:01"},
   {id: 2, album_type_id: 1, title: "O!RUL8,2?", slug: "orul82", release_date: "2013-09-11", image_url: "https://upload.wikimedia.org/wikipedia/en/8/82/BTS_O%21RUL8%2C_2%3F_album_cover.jpg", music_url: "https://open.spotify.com/album/4e4Is56C3ph1sevY1I9Mq6", created_at: "2019-04-07 00:35:48", updated_at: "2019-04-07 00:35:48"},
@@ -13,13 +24,6 @@ Album.create!([
   {id: 11, album_type_id: 1, title: "Love Yourself 轉 'Tear'", slug: "love-yourelf-tear", release_date: "2018-05-18", image_url: "https://upload.wikimedia.org/wikipedia/en/8/88/Love_Yourself_Tear_Cover.jpeg", music_url: "https://open.spotify.com/album/2jJfnAZE6IG3oYnUv2eCj4", created_at: "2019-04-07 00:35:48", updated_at: "2019-04-07 00:35:48"},
   {id: 12, album_type_id: 1, title: "Love Yourself 結 'Answer'", slug: "love-yourself-answer", release_date: "2018-08-24", image_url: "https://upload.wikimedia.org/wikipedia/en/e/e2/BTS%2C_Love_Yourself_Answer%2C_album_cover.jpg", music_url: "https://open.spotify.com/album/2lATw9ZAVp7ILQcOKPCPqp", created_at: "2019-04-07 00:35:48", updated_at: "2019-04-07 00:35:48"},
   {id: 66, album_type_id: 1, title: "Map of the Soul: Persona", slug: "map-of-the-soul-persona", release_date: "2019-04-12", image_url: "https://upload.wikimedia.org/wikipedia/en/5/5c/BTS_-_Map_of_the_Soul_Persona.png", music_url: "https://open.spotify.com/album/1AvXa8xFEXtR3hb4bgihIK", created_at: "2019-10-12 23:04:10", updated_at: "2020-01-25 20:45:39"}
-])
-AlbumType.create!([
-  {id: 1, category: "Studio Albums", created_at: "2019-04-07 00:35:48", updated_at: "2019-04-07 00:35:48"},
-  {id: 2, category: "Mixed Tapes", created_at: "2019-04-07 00:35:48", updated_at: "2019-04-07 00:35:48"},
-  {id: 3, category: "Sound Cloud", created_at: "2019-04-07 00:35:48", updated_at: "2019-04-07 00:35:48"},
-  {id: 4, category: "Collaborations", created_at: "2019-04-07 00:35:48", updated_at: "2019-04-07 00:35:48"},
-  {id: 5, category: "Original Sound Tracks", created_at: "2019-04-07 00:35:48", updated_at: "2019-10-13 06:08:38"}
 ])
 Card.create!([
   {id: 10, korean: "delete me", english: "delete me", notes: "meh", created_at: "2020-01-20 03:19:25", updated_at: "2020-01-20 03:19:25"},
@@ -383,8 +387,4 @@ Track.create!([
   {id: 122, album_id: 8, song_id: 106, track_number: 22, created_at: "2019-10-13 02:45:07", updated_at: "2019-10-13 02:45:07"},
   {id: 317, album_id: 12, song_id: 180, track_number: 22, created_at: "2020-01-25 20:04:20", updated_at: "2020-01-25 20:04:20"},
   {id: 123, album_id: 8, song_id: 107, track_number: 23, created_at: "2019-10-13 02:45:07", updated_at: "2019-10-13 02:45:07"}
-])
-User.create!([
-  {id: 2, username: "test", password_digest: "$2a$10$XnF.VA3QufBYir4AMVjJH.dN2a2W8yGRynUK7Plwk2e8NHmdn2U4u", created_at: "2019-10-21 21:29:32", updated_at: "2019-10-21 21:29:32", admin: false},
-  {id: 1, username: "annduong", password_digest: "$2a$10$7aOgP.7Vi.ZSxC10a5qu5eqsNPeAzORbgjiDOdJUb9uEcVFU0gJri", created_at: "2019-10-21 14:58:10", updated_at: "2020-01-13 21:46:49", admin: true}
 ])
