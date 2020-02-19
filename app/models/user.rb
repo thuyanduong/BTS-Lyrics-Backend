@@ -6,7 +6,7 @@ class User < ApplicationRecord
   def user_data
     {
       user_data: JSON.parse(UserSerializer.new(self).to_json),
-      categories: self.categories,
+      categories: self.categories.order(name: :asc),
       recent_flash_cards: self.recent_flash_cards
     }
   end
